@@ -13,6 +13,36 @@ header img:first-child{
     width: 80px;
     height: 100%;
 }
+.logo{
+    display: flex;
+    padding: 5px 0px;
+}
+.resau{
+    padding-left: 20px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    justify-content: space-between;
+}
+i{
+    color: gray;
+}
+.twitch:hover{
+    color: #8c00ff;
+}
+.youtube:hover{
+    color: #ff0000;
+}
+.tiktok:hover{
+    color: #5e61b0;
+}
+.twitter:hover{
+    color: #00bfff;
+}
+.instagram:hover{
+    color: #ff70d2;
+}
 header{
     display: flex;
     background-color: black;
@@ -36,6 +66,8 @@ header{
 nav{
     align-items: center;
     display: flex;
+    justify-content: flex-end;
+    width: 100%;
 }
 a{
     color: white;
