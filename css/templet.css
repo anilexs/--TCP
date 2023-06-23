@@ -3,8 +3,9 @@
 
 body{
     background-image: url(../img/fon.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
+    /* background-size: 100% 100%; */
+    background-size: cover;
+    /* background-repeat: no-repeat; */
     margin: 0;
 }
 img{
@@ -70,14 +71,17 @@ nav{
     justify-content: flex-end;
     width: 100%;
 }
-a{
+header a{
     color: gray;
     text-decoration: none;
     font-weight: 700;
     font-size: 30px;
 }
+header a:hover{
+    color: aqua;
+}
 .active{
-    color: white;
+    color: aqua;
 }
 ul{
     list-style-type: none;
@@ -90,9 +94,15 @@ ul{
 
 
 /* FOOTER */
-footer{
+.footer{
     position:absolute;
     bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+    background-color: black;
+    border-top: 2px solid aqua;
+}
+footer{
     width: 100%;
     margin-top: 20px;
     background-color: black;
