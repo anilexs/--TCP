@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Kablammo&family=Roboto:wght@400;900&display=swap');
+
+
 main{
     margin: 30px 0px;
 }
-
 
 .contener{
     width: 83.3%;
@@ -12,10 +14,42 @@ main{
 .don{
     border: 1px solid white;
     box-shadow: 0px 0px 10px 5px white;
-    /* height: 100px; */
     color: white;
-    text-align: center;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 }
-.paypalimg{
-    width: 120px;
+.donP{
+    text-align: center;
+    margin-bottom: 80px;
+}
+.donation{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.paypalImg{
+    width: 200px;
+}
+.kofiImg{
+    margin: auto;
+    width: 200px;
+    margin-bottom: 10px;
+}
+.kifibtn{
+    margin-bottom: 25px;
+}
+.gofundme{
+    position: relative;
+    font-size: 10px;
+    color: red;
+}
+.gofundmeTXT{
+    background-color: black;
+    position: absolute;
+    left: 5px;
+}
+a{
+    text-decoration: none;
+    color: red;
 }
