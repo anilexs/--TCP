@@ -1,0 +1,22 @@
+.menu {
+  position: relative;
+}
+
+.menu-items {
+  display: none;
+  position: absolute;
+  top: 30px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  list-style-type: none;
+  animation: fade 2s ease;
+}
+
+.menu-items li {
+  padding: 5px;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
