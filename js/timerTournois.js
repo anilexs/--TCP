@@ -1,64 +1,38 @@
-// Définir la date et l'heure de fin (année, mois - 1, jour, heure, minute, seconde)
-var endDate = new Date(2023, 5, 30, 21, 32, -20);
+// Utilisation de la fonction startCustomCountdown avec des valeurs personnalisées
+var customEndDate1 = new Date(2023, 6, 3, 0, 0, 0);
+var customEndDate2 = new Date(2023, 6, 4, 0, 5, 20);
+startCustomCountdown(customEndDate1, customEndDate2, "countdown", "timer");
 
-// a commanter a utiliser pour les test pour changer la date
-localStorage.setItem("endDate", endDate);
+var customEndDate3 = new Date(2023, 6, 4, 0, 0, 0);
+var customEndDate4 = new Date(2023, 6, 5, 0, 0, 0);
+startCustomCountdown(customEndDate3, customEndDate4, "countdown2", "timer2");
 
-// Vérifier si une date de fin est déjà stockée localement
-var storedEndDate = localStorage.getItem("endDate");
-if (storedEndDate) {
-  endDate = new Date(storedEndDate);
-} else {
-  // Stocker la date de fin localement si elle n'est pas déjà présente
-  localStorage.setItem("endDate", endDate);
-}
+var customEndDate5 = new Date(2023, 6, 5, 0, 0, 0);
+var customEndDate6 = new Date(2023, 6, 6, 0, 0, 0);
+startCustomCountdown(customEndDate5, customEndDate6, "countdown3", "timer3");
 
-// Définir l'action à effectuer à la fin du compte à rebours
-function performAction() {
-  // Afficher un message de fin en cour
-  document.getElementById("countdown").innerHTML = "en cour";
-  
-  // Planifier l'affichage du message "Terminé" 8 heures après
-  setTimeout(function() {
-    document.getElementById("countdown").innerHTML = "Terminé";
-  }, 8 * 60 * 60 * 1000); // 8 heures en millisecondes
-}
+var customEndDate7 = new Date(2023, 6, 6, 0, 0, 0);
+var customEndDate8 = new Date(2023, 6, 7, 0, 0, 0);
+startCustomCountdown(customEndDate7, customEndDate8, "countdown4", "timer4");
 
-// Fonction pour mettre à jour le compte à rebours
-function updateCountdown() {
-  var currentTime = new Date().getTime();
-  var timeRemaining = endDate - currentTime;
+var customEndDate9 = new Date(2023, 6, 7, 0, 0, 0);
+var customEndDate10 = new Date(2023, 6, 8, 0, 0, 0);
+startCustomCountdown(customEndDate9, customEndDate10, "countdown5", "timer5");
 
-  if (timeRemaining <= 0) {
-    // Le compte à rebours est terminé
-    performAction();
-  } else {
-    var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+var customEndDate11 = new Date(2023, 6, 8, 0, 0, 0);
+var customEndDate12 = new Date(2023, 6, 9, 0, 0, 0);
+startCustomCountdown(customEndDate11, customEndDate12, "countdown6", "timer6");
 
-    var countdownString = "";
-    
-    if (days > 0) {
-      countdownString += days + "j ";
-    }
-    if (hours > 0) {
-      countdownString += hours + "h ";
-    }
-    if (minutes > 0) {
-      countdownString += minutes + "m ";
-    }
-    
-    countdownString += seconds + "s";
+var customEndDate13 = new Date(2023, 6, 9, 0, 0, 0);
+var customEndDate14 = new Date(2023, 6, 10, 0, 0, 0);
+startCustomCountdown(customEndDate13, customEndDate14, "countdown7", "timer7");
 
-    document.getElementById("timer").innerHTML = countdownString;
+var customEndDate15 = new Date(2023, 6, 10, 0, 0, 0);
+var customEndDate16 = new Date(2023, 6, 11, 0, 0, 0);
+startCustomCountdown(customEndDate15, customEndDate16, "countdown8", "timer8");
 
-    setTimeout(updateCountdown, 1000); // Appeler la fonction updateCountdown() chaque seconde
-  }
-}
+var customEndDate17 = new Date(2023, 6, 11, 0, 0, 0);
+var customEndDate18 = new Date(2023, 6, 12, 0, 0, 0);
+startCustomCountdown(customEndDate17, customEndDate18, "countdown9", "timer9");
 
-// Démarrer le compte à rebours lorsque la page se charge
-window.onload = function() {
-  updateCountdown();
-};
+
