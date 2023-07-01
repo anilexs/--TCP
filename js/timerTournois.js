@@ -1,5 +1,5 @@
 // Définir la date et l'heure de fin (année, mois - 1, jour, heure, minute, seconde)
-var endDate = new Date(2023, 5, 29, 14, 10, 0);
+var endDate = new Date(2023, 5, 30, 21, 32, -20);
 
 // a commanter a utiliser pour les test pour changer la date
 localStorage.setItem("endDate", endDate);
