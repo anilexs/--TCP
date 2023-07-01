@@ -1,6 +1,6 @@
 // Utilisation de la fonction startCustomCountdown avec des valeurs personnalisées
-var customEndDate1 = new Date(2023, 6, 3, 0, 0, 0);
-var customEndDate2 = new Date(2023, 6, 4, 0, 5, 20);
+var customEndDate1 = new Date(2023, 6, 2, 0, 48, 50);
+var customEndDate2 = new Date(2023, 6, 2, 0, 49, 0);
 startCustomCountdown(customEndDate1, customEndDate2, "countdown", "timer");
 
 var customEndDate3 = new Date(2023, 6, 4, 0, 0, 0);
