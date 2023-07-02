@@ -81,40 +81,43 @@
 
 function performAction(elementId, endDate, nextEndDate, nextElementId) {
   var currentTime = new Date().getTime();
-  
+
   if (currentTime < endDate) {
     // Afficher le message "En cours" pour l'élément actuel
     document.getElementById(elementId).innerHTML = "En cours";
-    
+
     // Planifier l'affichage du message "Terminé" pour l'élément actuel
     setTimeout(function() {
       document.getElementById(elementId).innerHTML = "Terminé";
-      
-      // Planifier l'affichage du message "En cours" pour l'élément suivant
-      setTimeout(function() {
-        document.getElementById(nextElementId).innerHTML = "En cours";
-        
-        // Planifier l'affichage du message "Terminé" pour l'élément suivant
-        setTimeout(function() {
-          document.getElementById(nextElementId).innerHTML = "Terminé";
-        }, nextEndDate - endDate);
-      }, nextEndDate - currentTime);
     }, endDate - currentTime);
-  } else {
-    // Afficher le message "Terminé" pour l'élément actuel
-    document.getElementById(elementId).innerHTML = "Terminé";
-    
+
     // Planifier l'affichage du message "En cours" pour l'élément suivant
     setTimeout(function() {
       document.getElementById(nextElementId).innerHTML = "En cours";
-      
+    }, endDate - currentTime + nextEndDate - endDate);
+
+    // Planifier l'affichage du message "Terminé" pour l'élément suivant
+    setTimeout(function() {
+      document.getElementById(nextElementId).innerHTML = "Terminé";
+    }, nextEndDate - currentTime);
+  } else {
+    // Vérifier si le compte à rebours suivant est en cours
+    if (currentTime < nextEndDate) {
+      // Afficher le message "En cours" pour l'élément suivant
+      document.getElementById(nextElementId).innerHTML = "En cours";
+
       // Planifier l'affichage du message "Terminé" pour l'élément suivant
       setTimeout(function() {
         document.getElementById(nextElementId).innerHTML = "Terminé";
-      }, nextEndDate - endDate);
-    }, nextEndDate - currentTime);
+      }, nextEndDate - currentTime);
+    } else {
+      // Afficher le message "Terminé" pour l'élément actuel
+      document.getElementById(elementId).innerHTML = "Terminé";
+    }
   }
 }
+
+
 
 function startCustomCountdown(endDate, nextEndDate, elementId, timerId) {
   function updateCountdown() {
