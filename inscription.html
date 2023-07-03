@@ -5,20 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/templet.css">
-    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/inscription.css">
     
     <link rel="icon" href="./img/tcp logo.png" type="image/png">
     <title>Document</title> 
 </head>
 <body>
     <header>
-        <!-- <div class="login">
-            <ul>
-                <li><a href="">conection</a></li> 
-                <li><a href="">inscription</a></li>
-            </ul>
-        </div> -->
-
         <a href="" class="logo">
             <img src="./img/tcp logo.png" alt="" class="hdrimg">
             <p class="hdrp">TCP</p>
@@ -32,7 +25,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="./menu.html" class="active">Menu</a></li>
+                <li><a href="./menu.html">Menu</a></li>
                 <li><a href="./tous_nos_tournois.html">tous nos tournois</a></li>
                 <li><a href="./annonces_tournois.html">annonces tournois</a></li>
                 <li><a href="./faq.html">FAQ</a></li>
@@ -44,7 +37,32 @@
         </header>
     <div class="contener">
         <main>
-            
+            <form action="">
+                <label for="Nom">Nom</label> 
+                <input id="Nom" type="text" required> <br>
+                
+                <label for="Prenom">Prenom</label> 
+                <input id="Prenom" type="text" required> <br>
+
+                <label for="name">Psedo</label> 
+                <input id="name" type="text" required> <br>
+                
+                <label for="img">img</label> 
+                <input id="img" type="file" accept="image/*"> <br>
+
+                <label for="mdp">mdp</label> 
+                <input id="mdp" type="password" required> <br>
+
+                <label for="name">E-mail</label> 
+                <input id="name" type="email" required> <br>
+
+                 <label>Abonnement à la newsletter :</label>
+                <input type="checkbox" id="newsletter" name="newsletter" value="oui">
+                <label for="newsletter">Je souhaite m'abonner à la newsletter.</label><br>
+
+
+                <input type="submit"></input>
+            </form>
         </main>
     </div>
 

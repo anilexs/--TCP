@@ -69,11 +69,16 @@ i{
 .instagram:hover{
     color: #ff70d2;
 }
+.login{
+    position: absolute;
+    top: 100%;
+}
 header{
     display: flex;
     background-color: black;
     border-bottom: 2px solid aqua;
     margin-bottom: 8px;
+    position: relative;
 }
 .hdrp{
     color: white;
