@@ -9,7 +9,7 @@ document.addEventListener('keydown', function(event) {
     // Effectuez l'action de l'easter egg ici (par exemple, affichez un message)
     // alert('Easter egg activé !');
     console.log("GG");
-    window.location.href = "./egg/egg1.html";
+    window.location.href = "./egg/sneek.html";
 
   }
 
