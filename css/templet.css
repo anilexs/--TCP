@@ -35,7 +35,7 @@ a{
 img{
     width: 100%;
 }
-header img:first-child{
+.header img:first-child{
     width: 80px;
     height: 100%;
 }
@@ -69,16 +69,11 @@ i{
 .instagram:hover{
     color: #ff70d2;
 }
-.login{
-    position: absolute;
-    top: 100%;
-}
-header{
+.header{
     display: flex;
     background-color: black;
     border-bottom: 2px solid aqua;
     margin-bottom: 8px;
-    position: relative;
 }
 .hdrp{
     color: white;
@@ -98,17 +93,17 @@ nav{
     justify-content: flex-end;
     width: 100%;
 }
-header a{
+.header a{
     color: gray;
     text-decoration: none;
     font-weight: 700;
     font-size: 30px;
 }
-header a:hover{
+.header a:hover{
     color: aqua;
 }
 .active{
-    color: aqua;
+    color: aqua !important;
 }
 ul{
     list-style-type: none;
@@ -119,6 +114,12 @@ ul{
 }
 
 
+/* user */
+
+.user{
+    background-color: black;
+    min-height: 20px;
+}
 
 /* FOOTER */
 .footer{
