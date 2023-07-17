@@ -116,11 +116,19 @@ ul{
 
 /* user */
 
-.user{
+.user-conected{
+    background-color: black;
+    min-height: 20px;
+    color: white;
+}
+.user-disconecter{
+    display: none;
     background-color: black;
     min-height: 20px;
 }
-
+.user-disconecter a{
+    color: white;
+}
 /* FOOTER */
 .footer{
     position:absolute;
