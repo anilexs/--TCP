@@ -1,8 +1,5 @@
 var audioElement = new Audio("../mp3/maître-des-lieux.mp3");
 
-// Ajouter l'élément audio au document
-document.body.appendChild(audioElement);
-
 // Lire l'audio
 function playAudio() {
   audioElement.play();
