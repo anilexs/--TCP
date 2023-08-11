@@ -24,10 +24,9 @@ vertical-align: baseline;
 
 body{
     background-image: url(../img/fon.jpg);
-    /* background-size: 100% 100%; */
     background-size: cover;
-    /* background-repeat: no-repeat; */
     margin: 0;
+    overflow: hidden;
 }
 a{
     text-decoration: none;

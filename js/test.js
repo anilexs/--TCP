@@ -81,20 +81,29 @@ $(window).resize(function() {
     handleWindowResize();
 });
 
-var menubool = false;
 
-$("#burgerMenu").click(() => {
-    $("#burger").toggle();
 
-    switch (menubool) {
-        case true:
-            $("#burger").animate({
-                right: 0
-              }, 3000);
-            menubool = false;
-            break;
-        case false:
-            menubool = true;
-            break;
+var menuVisible = false;
+$("#burgerMenu").click(function() {
+    $("#burger").stop();
+    
+    if (menuVisible) {
+        $("#burger").animate(
+            {
+                right: "-250px"
+            },
+            300,
+            "linear"
+        );
+    } else {
+        $("#burger").animate(
+            {
+                right: "0"
+            },
+            300,
+            "linear"
+        );
     }
-})
+    
+    menuVisible = !menuVisible;
+});
