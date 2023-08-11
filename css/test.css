@@ -1,16 +1,13 @@
 .navAbso{
     position: relative;
 }
-button{
+.burgerMenu{
     background-color: transparent;
 }
-#burger{
+.burger{
     position: absolute;
     right: -250px;
     top: 60px;
     width: 250px;
     /* background-color: #223044; */
-}
-.menuSize{
-    
 }
