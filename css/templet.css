@@ -105,7 +105,7 @@ nav{
 .active{
     color: aqua !important;
 }
-ul{
+ul, .navAbso{
     list-style-type: none;
     display: flex;  
     padding: 0;

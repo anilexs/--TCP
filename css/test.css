@@ -1,0 +1,17 @@
+.navAbso{
+    position: relative;
+}
+
+button{
+    background-color: transparent;
+}
+#burger{
+    /* display: none; */
+    position: absolute;
+    right: -140px;
+    top: 60px;
+    background-color: #223044;
+}
+.menuSize{
+    
+}
