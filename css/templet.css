@@ -26,8 +26,8 @@ body{
     background-image: url(../img/fon.jpg);
     background-size: cover;
     margin: 0;
-    overflow: hidden;
-    /* overflow-x: hidden; */
+    /* overflow: hidden; */
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;
