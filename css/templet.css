@@ -93,6 +93,21 @@ nav{
     justify-content: flex-end;
     width: 100%;
 }
+
+.navAbso{
+    position: relative;
+}
+.burgerMenu{
+    background-color: transparent;
+}
+.burger{
+    position: absolute;
+    right: -250px;
+    top: 60px;
+    width: 250px;
+    /* background-color: #223044; */
+}
+
 .header a{
     color: gray;
     text-decoration: none;
