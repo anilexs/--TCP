@@ -1,4 +1,4 @@
-var audioElement = new Audio("../mp3/maître-des-lieux.mp3");
+var audioElement = new Audio("/mp3/maître-des-lieux.mp3");
 
 function playAudio() {
   audioElement.play();

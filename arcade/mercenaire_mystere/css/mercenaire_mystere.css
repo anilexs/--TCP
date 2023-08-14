@@ -1,8 +1,6 @@
 label{
     color: white;
+    text-transform: uppercase;
 }
 
-.option1{
-    display: flex;
-    justify-content: center;
-}
+
