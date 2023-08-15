@@ -3,4 +3,12 @@ label{
     text-transform: uppercase;
 }
 
-
+.select{
+    background-color: rgb(39, 37, 37);
+    height: 30px;
+}
+.img{
+    background-color: red;
+    height: 150px;
+    width: 150px;
+}

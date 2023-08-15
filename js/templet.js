@@ -29,7 +29,7 @@ $('.lieu').click(() => {
 
 function handleWindowResize() {
   var windowWidth = $(window).width();
-  console.log("Window width: " + windowWidth); // Ajout de cette ligne
+  
   if (windowWidth >= 600) {
       $(".Menu").insertBefore(".burgerMenu");
       $(".serveur").insertBefore(".burgerMenu");
