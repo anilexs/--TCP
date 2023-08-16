@@ -8,7 +8,7 @@ label{
 
 #select{
     background-color: rgb(39, 37, 37);
-    height: 300px;
+    min-height: 300px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -16,6 +16,7 @@ label{
     background-color: red;
     height: 150px;
     width: 150px;
+    background-size: cover;
 }
 .img2{
     background-color: black;
