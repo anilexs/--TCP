@@ -1,14 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Kablammo&family=Oswald:wght@500&family=Roboto:wght@400;900&display=swap');
+
 label{
     color: white;
     text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
 }
 
-.select{
+#select{
     background-color: rgb(39, 37, 37);
-    height: 30px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .img{
     background-color: red;
+    height: 150px;
+    width: 150px;
+}
+.img2{
+    background-color: black;
     height: 150px;
     width: 150px;
 }
