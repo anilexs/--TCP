@@ -348,9 +348,8 @@ function updateDistance() {
 
     // Si la distance en dessous du footer est supérieure à zéro
     if (distanceEnPixels > 0) {
-      footer.css('bottom', '0px');
       footer.css('position', 'absolute');
-      
+      footer.css('bottom', '0px');
     }
   }
   
