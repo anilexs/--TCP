@@ -263,7 +263,6 @@ checkboxes.on("change", function() {
     $("#all").prop("checked", allChecked);
     
     
-    updateDistance();
 });
 
 
@@ -326,49 +325,49 @@ rogue(vy, "vyDiv", "défenseur", "vy.jpg");
 // $(window).on('load', updateDistance);
 // $(window).on('resize', updateDistance);
 
-const elementDepasse = $('#select');
-const footer = $('.footer');
-const espaceMinimumRequis = 100;
+// const elementDepasse = $('#select');
+// const footer = $('.footer');
+// const espaceMinimumRequis = 100;
 
-function updateDistance() {
-  const rectElement = elementDepasse[0].getBoundingClientRect();
-  const rectFooter = footer[0].getBoundingClientRect();
+// function updateDistance() {
+//   const rectElement = elementDepasse[0].getBoundingClientRect();
+//   const rectFooter = footer[0].getBoundingClientRect();
   
-  const distanceEnPixels = rectFooter.top - rectElement.bottom;
+//   const distanceEnPixels = rectFooter.top - rectElement.bottom;
 
-  if (distanceEnPixels < 0) {
-    console.log(`L'élément est en partie sous le footer de ${distanceEnPixels}px.`);
-    footer.css('position', 'static');
+//   if (distanceEnPixels < 0) {
+//     console.log(`L'élément est en partie sous le footer de ${distanceEnPixels}px.`);
+//     footer.css('position', 'static');
   
-  } else {
-    console.log(`L'élément n'est pas sous le footer.`);
+//   } else {
+//     console.log(`L'élément n'est pas sous le footer.`);
 
-    // Réinitialisez la position du footer
-    footer.css('bottom', 'auto');
+//     // Réinitialisez la position du footer
+//     footer.css('bottom', 'auto');
 
-    // Si la distance en dessous du footer est supérieure à zéro
-    if (distanceEnPixels > 0) {
-      footer.css('position', 'absolute');
-      footer.css('bottom', '0px');
-    }
-  }
+//     // Si la distance en dessous du footer est supérieure à zéro
+//     if (distanceEnPixels > 0) {
+//       footer.css('position', 'absolute');
+//       footer.css('bottom', '0px');
+//     }
+//   }
   
-  const espaceDisponible = window.innerHeight - rectElement.bottom;
+//   const espaceDisponible = window.innerHeight - rectElement.bottom;
 
-  if (espaceDisponible >= espaceMinimumRequis) {
-    console.log(`Il y a au moins ${espaceMinimumRequis}px d'espace disponible en dessous de l'élément.`);
+//   if (espaceDisponible >= espaceMinimumRequis) {
+//     console.log(`Il y a au moins ${espaceMinimumRequis}px d'espace disponible en dessous de l'élément.`);
     
-    // Faites quelque chose si l'espace est suffisant
+//     // Faites quelque chose si l'espace est suffisant
     
-  } else {
-    console.log(`Il n'y a pas suffisamment d'espace disponible en dessous de l'élément.`);
+//   } else {
+//     console.log(`Il n'y a pas suffisamment d'espace disponible en dessous de l'élément.`);
     
-    // Faites quelque chose si l'espace est insuffisant
-  }
-}
+//     // Faites quelque chose si l'espace est insuffisant
+//   }
+// }
 
-$(window).on('load', updateDistance);
-$(window).on('resize', updateDistance);
+// $(window).on('load', updateDistance);
+// $(window).on('resize', updateDistance);
 
 
 
