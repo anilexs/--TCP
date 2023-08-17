@@ -13,13 +13,7 @@ label{
     flex-wrap: wrap;
 }
 .img{
-    background-color: red;
     height: 150px;
     width: 150px;
     background-size: cover;
-}
-.img2{
-    background-color: black;
-    height: 150px;
-    width: 150px;
 }

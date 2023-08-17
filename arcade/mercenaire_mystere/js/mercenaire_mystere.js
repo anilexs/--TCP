@@ -1,7 +1,7 @@
 let tabAssoc = {
     "mercener" : {
         "anvil" : ["anvilDiv", "anvil.jpg"],
-        "cannon" : ["cannonDiv", "cannon.jpg"],
+        "cannon" : ["cannonDiv", "cannon.png"],
         "chaac" : ["chaacDiv", "chaac.jpg"],
         "dahlia" : ["dahliaDiv", "dahlia.jpg"],
         "dallas" : ["dallasDiv", "dallas.jpg"],
@@ -43,7 +43,7 @@ let tabAssoc = {
         "vy" : ["vyDiv", "vy.jpg"],
     },
     "premiére_ligne" : {
-        "cannon" : ["cannonDiv", "cannon.jpg"], 
+        "cannon" : ["cannonDiv", "cannon.png"], 
         "dima" : ["dimaDiv", "dima.jpg"],
         "gl1tch" : ["gl1tchDiv", "gl1tch.jpg"], 
         "sigrid" : ["sigridDiv", "sigrid.jpg"], 
@@ -209,10 +209,6 @@ $("#all").change(function() {
     }
   });
 
-
-
-
-
 function rogue(id, divId, role, img) {
     $(id).change(function() {
         if ($(id).is(":checked")) {
@@ -224,15 +220,59 @@ function rogue(id, divId, role, img) {
         } else {
             $("#" + divId).remove();
         }
+        
     });
 }
+
+    var checkboxes = $("input[type='checkbox']");
+var categories = Object.keys(tabAssoc);
+
+checkboxes.on("change", function() {
+    var categoryChecked = {};
+
+    categories.forEach(function(category) {
+        categoryChecked[category] = true;
+    });
+
+    checkboxes.each(function() {
+        var checkboxId = $(this).attr('id');
+        var isChecked = $(this).is(":checked");
+
+        categories.forEach(function(category) {
+            if (checkboxId in tabAssoc[category]) {
+                if (!isChecked) {
+                    categoryChecked[category] = false;
+                }
+            } else if ($(this).closest("." + category).length > 0 && !isChecked) {
+                categoryChecked[category] = false;
+            }
+        });
+    });
+
+    checkboxes.each(function() {
+        var checkboxId = $(this).attr('id');
+        if (checkboxId in tabAssoc) {
+            $(this).prop("checked", categoryChecked[checkboxId]);
+        }
+    });
+
+    var allChecked = true;
+    categories.forEach(function(category) {
+        allChecked = allChecked && categoryChecked[category];
+    });
+    $("#all").prop("checked", allChecked);
+    
+    
+    updateDistance();
+});
+
 
 
 
 
 rogue(anvil, "anvilDiv", "défenseur","anvil.jpg");
-rogue(cannon, "cannonDiv", "premiére_ligne", "");
-rogue(chaac, "chaacDiv", "duellist", "");
+rogue(cannon, "cannonDiv", "premiére_ligne", "cannon.png");
+rogue(chaac, "chaacDiv", "duellist", "chaac.jpg");
 rogue(dahlia, "dahliaDiv", "soutien", "dahlia.jpg");
 rogue(dallas, "dallasDiv", "renseignement", "dallas.jpg");
 rogue(dima, "dimaDiv", "premiére_ligne", "dima.jpg");
@@ -245,14 +285,43 @@ rogue(lancer, "lancerDiv", "duellist", "lancer.jpg");
 rogue(mack, "mackDiv", "défenseur", "mack.jpg");
 rogue(phantom, "phantomDiv", "renseignement","phantom.jpg");
 rogue(ronin, "roninDiv", "duellist", "ronin.jpg");
-rogue(runway, "runwayDiv", "soutien ", "");
-rogue(saint, "saintDiv" , "soutien", "");
-rogue(scorch, "scorchDiv", "duellist", "");
-rogue(seeker, "seekerDiv", "renseignement", "");
-rogue(sigrid, "sigridDiv", "premiére_ligne", "");
-rogue(switchblade, "switchbladeDiv", "premiére_ligne", "");
-rogue(talon, "talonDiv", "renseignement", "");
-rogue(trench, "trenchDiv", "défenseur", "");
-rogue(umbra, "umbraDiv", "duellist", "");
-rogue(vivi, "viviDiv", "soutien", "");
-rogue(vy, "vyDiv", "défenseur", "");
+rogue(runway, "runwayDiv", "soutien ", "runway.jpg");
+rogue(saint, "saintDiv" , "soutien", "saint.jpg");
+rogue(scorch, "scorchDiv", "duellist", "scorch.jpg");
+rogue(seeker, "seekerDiv", "renseignement", "seeker.jpg");
+rogue(sigrid, "sigridDiv", "premiére_ligne", "sigrid.jpg");
+rogue(switchblade, "switchbladeDiv", "premiére_ligne", "switchblade.jpg");
+rogue(talon, "talonDiv", "renseignement", "talon.jpg");
+rogue(trench, "trenchDiv", "défenseur", "trench.jpg");
+rogue(umbra, "umbraDiv", "duellist", "umbra.jpg");
+rogue(vivi, "viviDiv", "soutien", "vivi.jpg");
+rogue(vy, "vyDiv", "défenseur", "vy.jpg");
+
+
+
+const elementDepasse = $('#select');
+const footer = $('.footer');
+
+function updateDistance() {
+  const rectElement = elementDepasse[0].getBoundingClientRect();
+  const rectFooter = footer[0].getBoundingClientRect();
+  
+  const distanceEnPixels = rectFooter.top - rectElement.bottom;
+
+  if (distanceEnPixels < 0) {
+    console.log(`L'élément est en partie sous le footer de ${distanceEnPixels}px.`);
+
+    // Ajoutez la valeur de distanceEnPixels pour déplacer le footer vers le bas
+    const footerBottom = parseInt($('.footer').css('bottom'), 10); // Obtenir la valeur actuelle du bottom
+    $('.footer').css('bottom', footerBottom - Math.abs(distanceEnPixels) + 'px'); // Soustraire la valeur absolue de distanceEnPixels
+  } else {
+    console.log(`L'élément n'est pas sous le footer.`);
+
+    // Réinitialisez la position du footer
+    $('.footer').css('bottom', '0px');
+  }
+}
+
+$(window).on('load', updateDistance);
+$(window).on('resize', updateDistance);
+
