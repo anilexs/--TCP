@@ -295,4 +295,40 @@ rogue(vivi, "viviDiv", "soutien", "vivi.jpg");
 rogue(vy, "vyDiv", "défenseur", "vy.jpg");
 
 
+const code = {
+    "secret code": function() {
+      console.log("You found the secret!");
+      
+    },
+    "1": function() {
+      console.log("You found the secret!");
+      
+    },
+    // Ajoutez d'autres easter eggs ici
+  };
+  
+  let currentInput = "";
+  
+  // Écouteur d'événement pour capturer les entrées clavier
+  document.addEventListener("keydown", function(event) {
+    // Vérifier si la touche "Enter" a été pressée
+    if (event.key === "Enter") {
+      // Vérifier si l'entrée correspond à un "easter egg"
+      if (code.hasOwnProperty(currentInput)) {
+        code[currentInput]();
+      } else {
+        console.log("You entered: " + currentInput);
+      }
+  
+      // Réinitialiser l'entrée en cours
+      currentInput = "";
+    } else {
+      // Ajouter la touche à l'entrée en cours
+      currentInput += event.key;
+    }
+  });
+  
+  
+  
 
+//   code["secret code"]();
