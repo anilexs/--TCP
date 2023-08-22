@@ -139,12 +139,12 @@ $(".burgerMenu").click(function() {
 
 
 // temps de chargement de la page en millisecond
-    $(document).ready(function() {
-        var startTime = performance.now();
+    // $(document).ready(function() {
+    //     var startTime = performance.now();
 
-        $(window).on("load", function() {
-            var endTime = performance.now();
-            var loadTime = (endTime - startTime) / 1000; // Convertir en secondes
-            console.log("Le temps de chargement de la page est de " + loadTime.toFixed(5) + " secondes.");
-        });
-    });
+    //     $(window).on("load", function() {
+    //         var endTime = performance.now();
+    //         var loadTime = (endTime - startTime) / 1000; // Convertir en secondes
+    //         console.log("Le temps de chargement de la page est de " + loadTime.toFixed(5) + " secondes.");
+    //     });
+    // });

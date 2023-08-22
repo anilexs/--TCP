@@ -295,21 +295,21 @@ rogue(vivi, "viviDiv", "soutien", "vivi.jpg");
 rogue(vy, "vyDiv", "défenseur", "vy.jpg");
 
 
-// const code = {
-//     "secret code": function() {
-//       console.log("You found the secret!");
+const code = {
+    "secret code": function() {
+      console.log("You found the secret!");
       
-//     },
-//     "1": function() {
-//       console.log("You found the secret!");
+    },
+    "1": function() {
+      console.log("You found the secret!");
       
-//     },
-//     // Ajoutez d'autres easter eggs ici
-//   };
+    },
+    // Ajoutez d'autres easter eggs ici
+  };
   
-//   let currentInput = "";
+  let currentInput = "";
   
-//   // Écouteur d'événement pour capturer les entrées clavier
+  // Écouteur d'événement pour capturer les entrées clavier
 //   document.addEventListener("keydown", function(event) {
 //     // Vérifier si la touche "Enter" a été pressée
 //     if (event.key === "Enter") {
@@ -327,8 +327,5 @@ rogue(vy, "vyDiv", "défenseur", "vy.jpg");
 //       currentInput += event.key;
 //     }
 //   });
-  
-  
-  
 
 //   code["secret code"]();
